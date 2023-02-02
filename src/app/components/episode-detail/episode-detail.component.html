@@ -1,0 +1,10 @@
+<div>
+    <div class="card" style="border-radius: 2px; border-style: dashed;">
+        <div>
+            <h1>Nombre del episodio</h1>
+            <div *ngFor="let character of characters">
+                <button (click)="getCharacter(character)">Detalles</button>
+            </div>
+        </div>
+    </div>
+</div>
