@@ -7,6 +7,8 @@ import { HomeComponent } from './components/home/home.component';
 import { EpisodeDetailComponent } from './components/episode-detail/episode-detail.component';
 import { EpisodesComponent } from './components/episodes/episodes.component';
 import { CharacterComponent } from './components/character/character.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { CharacterComponent } from './components/character/character.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
