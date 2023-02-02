@@ -8,10 +8,19 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
   constructor(private router: Router) {}
-  
-  getEpisodes(n: string, m: string) {
-    //TODO validar rango
 
-    this.router.navigate(['/episodes', `${n}:${m}`]);
+  getEpisodes(n: string | number, m: string | number) {
+    n = Number(n);
+    m = Number(m);
+
+    if (!Number.isNaN(n) && n > 0 && !Number.isNaN(m) && m > 0) {
+      if (n > m) {
+        [n, m] = [m, n];
+      }
+
+      this.router.navigate(['/episodes', `${n}:${m}`]);
+    } else {
+      alert('Rango no valido');
+    }
   }
 }
