@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Episode } from '../interfaces/episode';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +15,7 @@ export class RickAndMortyApiService {
     for (let i = n; i <= m; i++) {
       range += `${i},`;
     }
-    return this.http.get(`${this.urlE}/${range}`);
+    return this.http.get<Episode[]>(`${this.urlE}/${range}`);
   }
 
   getCharacter(id: number) {
