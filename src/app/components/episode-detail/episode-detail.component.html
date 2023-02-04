@@ -2,8 +2,14 @@
     <div class="card" style="border-radius: 2px; border-style: dashed;">
         <div>
             <h1>Nombre del episodio</h1>
+            {{detail?.id}}
+            {{detail?.name}}
+            {{detail?.air_date}}
+            {{detail?.episode}}
             <div *ngFor="let character of characters">
-                <button (click)="getCharacter(character)">Detalles</button>
+                {{character.species}}
+                {{character.name}}
+                <button (click)="getCharacter(character.id)">Detalles</button>
             </div>
         </div>
     </div>

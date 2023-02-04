@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Episode } from '../interfaces/episode';
+import { Character } from '../interfaces/character';
 
 @Injectable({
   providedIn: 'root',
@@ -19,6 +20,6 @@ export class RickAndMortyApiService {
   }
 
   getCharacter(id: number) {
-    return this.http.get(`${this.urlC}/${id}`);
+    return this.http.get<Character>(`${this.urlC}/${id}`);
   }
 }

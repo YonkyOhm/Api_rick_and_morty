@@ -1,3 +1,4 @@
-<div *ngFor="let episode of episodes">
-    <app-episode-detail></app-episode-detail>
+<div *ngFor="let episode of episodes" >
+    
+    <app-episode-detail [detail]="episode"></app-episode-detail>
 </div>
