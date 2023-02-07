@@ -8,6 +8,7 @@ import { EpisodeDetailComponent } from './components/episode-detail/episode-deta
 import { EpisodesComponent } from './components/episodes/episodes.component';
 import { CharacterComponent } from './components/character/character.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FilterPipe } from './pipes/filter.pipe';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     EpisodeDetailComponent,
     EpisodesComponent,
-    CharacterComponent
+    CharacterComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
